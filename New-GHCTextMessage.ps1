@@ -11,7 +11,7 @@ function New-GHCTextMessage {
     }
 
     process {
-        $TextMessage = @{text = $message}
+        $TextMessage = @{'text' = $message}
         $TextMessage
     }
 

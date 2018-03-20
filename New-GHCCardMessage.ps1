@@ -4,19 +4,17 @@ function New-GHCCardMessage {
         # Endpoint
         [Parameter(Mandatory)]
         [scriptblock]
-        $Endpoint
+        $Content
     )
 
     begin {
     }
 
     process {
-        $Card = @{Card = $Endpoint}
+        $Card = @{'cards' = @(Invoke-Command -ScriptBlock $Content)}
         $Card
     }
 
     end {
     }
 }
-
-
