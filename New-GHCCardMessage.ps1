@@ -11,7 +11,7 @@ function New-GHCCardMessage {
     }
 
     process {
-        $Card = @{Cards = @(Invoke-Command -ScriptBlock $Content)}
+        $Card = @{'cards' = @(Invoke-Command -ScriptBlock $Content)}
         $Card
     }
 

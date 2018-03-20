@@ -18,7 +18,6 @@ function New-GHCCardHeader {
             Position = 2,
             ValueFromPipeline = $True,
             ParameterSetName = 'image')]
-        [ValidatePattern("/^(?:(http[s]?|ftp[s]):\/\/)?([^:\/\s]+)(:[0-9]+)?((?:\/\w+)*\/)([\w\-\.]+[^#?\s]+)([^#\s]*)?(#[\w\-]+)?$/i")]
         [string]
         $ImageURL,
         # Image Style
@@ -40,10 +39,10 @@ function New-GHCCardHeader {
             $Header.header.subtitle = $Subtitle
         }
         if ($ImageURL) {
-            $header.header.imageurl = $ImageURL
+            $header.header.imageUrl = $ImageURL
         }
         if ($ImageStyle) {
-            $header.header.imagestyle = $ImageStyle
+            $header.header.imageStyle = $ImageStyle.ToUpper()
         }
         $Header
     }

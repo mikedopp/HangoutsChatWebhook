@@ -1,25 +1,20 @@
 function New-GHCCardSection {
     [CmdletBinding()]
     param (
-        # Header
+        # Widgets
         [Parameter(Mandatory = $false,
             Position = 0)]
-        [string]
-        $Header,
-        # Widgets
-        [Parameter(Mandatory = $true,
-            Position = 1)]
         [scriptblock]
-        $Widgets
+        $Content
     )
 
     begin {
     }
 
     process {
-        $Section = @{'sections' = @(invoke-command -ScriptBlock $widgets)}
-        if ($Header) {
-            $Section.header = $header
+        $Section = @{'sections' = @(
+                invoke-command -ScriptBlock $Content
+            )
         }
         $section
     }

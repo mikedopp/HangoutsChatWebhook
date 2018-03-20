@@ -15,8 +15,9 @@ function Send-GHCWebhookMessage {
     }
 
     process {
-        $Message = ConvertTo-Json $Message -Depth 50
-        Invoke-WebRequest -Uri $URI -Method POST -Headers @{"Content-Type" = 'Application/json; charset=UTF-8'} -Body $Message
+        $JSON = ConvertTo-Json $Message -Depth 50
+        $JSON
+        Invoke-WebRequest -Uri $URI -Method POST -Headers @{"Content-Type" = 'Application/json; charset=UTF-8'} -Body $JSON
     }
 
     end {
