@@ -7,7 +7,7 @@ function Send-GHCWebhookMessage {
         $URI,
         # Message
         [Parameter(Mandatory)]
-        [string]
+        [hashtable]
         $Message
     )
 

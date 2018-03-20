@@ -4,31 +4,17 @@ function New-GHCCardMessage {
         # Endpoint
         [Parameter(Mandatory)]
         [scriptblock]
-        $Endpoint
+        $Content
     )
 
     begin {
     }
 
     process {
-        $Card = @{Card = $Endpoint}
+        $Card = @{Cards = @(Invoke-Command -ScriptBlock $Content)}
         $Card
     }
 
     end {
-    }
-}
-
-
-
-
-New-GHCCardMessage -Endpoint {
-    New-GHCCardHeader -Title "This is a header" -subtitle "This is the sub title" -imageURL "http:\\www.img.com\img.png" -imageStyle "avatar"
-    New-GHCCardSection -Endpoint {
-        New-GHCCardSectionHeader -Text "Section"
-        New-GHCCardWidget -Endpoint {
-            New-GHCCardWidgetImage
-            New-GHCCardWidgetKeyValue
-        }
     }
 }
