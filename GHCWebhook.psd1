@@ -12,7 +12,11 @@
     RootModule        = 'GHCWebhook.psm1'
 
     # Version number of this module.
+<<<<<<< HEAD
     ModuleVersion     = '1.0.0'
+=======
+    ModuleVersion     = '0.0.2'
+>>>>>>> 2b5f7d83ce8452d1abd77c6bdf1699d35e2baff5
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -24,13 +28,21 @@
     Author            = 'pomeroyte'
 
     # Company or vendor of this module
+<<<<<<< HEAD
     CompanyName       = 'tom@pome.ro'
+=======
+    CompanyName       = 'Unknown'
+>>>>>>> 2b5f7d83ce8452d1abd77c6bdf1699d35e2baff5
 
     # Copyright statement for this module
     Copyright         = '(c) 2018 pomeroyte. All rights reserved.'
 
     # Description of the functionality provided by this module
+<<<<<<< HEAD
     # Description = ''
+=======
+    Description       = 'Module for interacting with Google Hangout Chat Webhooks.'
+>>>>>>> 2b5f7d83ce8452d1abd77c6bdf1699d35e2baff5
 
     # Minimum version of the Windows PowerShell engine required by this module
     # PowerShellVersion = ''
