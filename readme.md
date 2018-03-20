@@ -29,6 +29,8 @@ Send-GHCWebhookMessage -URI $UIR -Message $Message
 ## Card message example
 Sending a Card message utlizes a number of cmdlets nested together to build the card of your liking. Here is a recreation of the JSON example on the [Google Hangouts Chat API documentation](https://developers.google.com/hangouts/chat/reference/message-formats/cards#full_example_pizza_bot).
 
+![](/img/screenshot.png)
+
 ```powershell
 $uri = "https://chat.googleapis.com/..."
 
