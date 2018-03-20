@@ -24,7 +24,7 @@
     Author            = 'pomeroyte'
 
     # Company or vendor of this module
-    CompanyName       = 'Unknown'
+    CompanyName       = 'tom@pome.ro'
 
     # Copyright statement for this module
     Copyright         = '(c) 2018 pomeroyte. All rights reserved.'
