@@ -22,7 +22,7 @@ This is a sample message with formating"
 
 $Message = New-GHCTextMessage -Message $text
 
-Send-GHCWebhookMessage -URI $UIR -Message $Message
+Send-GHCWebhookMessage -URI $URI -Message $Message
 
 ```
 
